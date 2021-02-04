@@ -77,6 +77,129 @@
  }
 
  
+ body {
+    background: #FED550;
+  }
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ice-cream {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:200px;
+    width:350px;
+    background: #fac3bf;
+    border-top: 8px solid #e6aecb;
+    border-radius: 50% 50% 50% 50% / 83% 83% 17% 17%;
+  }
+  
+  
+  
+  .face {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+  }
+  
+  .nose{
+       position: absolute;
+       width: 40%;
+       height: 45%;
+     bottom: 60px;
+     z-index:2;
+       background: linear-gradient(to bottom, #fac3bf 65%, #f2a699);
+       border-radius: 20px 20px 100px 100px;
+       box-shadow: 0 5px 0 #e88d7d
+          }
+  
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+  
+  .eye {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    bottom:-60px;
+    background: black;
+    border-bottom: 2px solid #FF98CC;
+    border-radius: 100%;
+  }
+  
+  .eye::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 100%;
+  }
+  
+  .mouth {
+   position: absolute;
+       width: 150px;
+       height: 20px;
+       bottom: 40px ;
+       border-radius: 1000px 1000px 0 0 / 400px 400px 0 0;
+       border: 5px solid #f18470;
+       border-bottom: 0px;
+       box-shadow: inset 0 10px 0 #f7b6aa;
+  }
+  
+  .finleft {
+       position: absolute;
+       bottom: 10px;
+       width: 75px;
+       height: 50px;
+       left: -55px;
+       border-radius: 30% 70% 70% 30% / 39% 6% 94% 61%;
+       background: #f5ac9f;
+       animation: flap 1s ease-in-out infinite alternate;
+       transform-origin: top right;
+       box-shadow: inset 0 0 30px 0 #f39887;
+  }
+   @keyframes flap {
+       to {
+           transform: rotate(45deg);
+      }
+  }
+  
+  
+  .finright {
+       position: absolute;
+       bottom: 10px;
+       width: 75px;
+       height: 50px;
+       left: 55px;
+       border-radius: 30% 70% 70% 30% / 39% 6% 94% 61%;
+       background: #f5ac9f;
+       animation: flap 1s ease-in-out infinite alternate;
+       transform-origin: top right;
+       box-shadow: inset 0 0 30px 0 #f39887;
+  }
+   @keyframes flap2 {
+       to {
+           transform: rotate(-45deg);
+      }
+  }
 
  /*prevent many large-by-comparison ripples by shrinking the height*/
 
