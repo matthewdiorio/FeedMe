@@ -25,35 +25,33 @@
      }
  }
 
- header{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    z-index: 100;
+ header {
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+     position: absolute;
+     background-size: cover;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     z-index: 100;
  }
- 
- .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
 
+ .center {
+     margin: 0;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+ }
 
  body {
      background-color: #323232;
      margin: 0;
      padding: 0 0 0 0;
+     overflow-x: hidden;
  }
-
-
 
  .waves {
      position: relative;
@@ -61,145 +59,319 @@
  }
 
  .ocean {
-     position:relative;
-     background: linear-gradient(0deg, rgb(8, 2, 116) 0%, rgba(9, 9, 121, 1) 35%, rgba(45, 85, 170, 1) 100%);
+     position: relative;
+     background: linear-gradient(0deg, rgb(4, 0, 78) 0%, rgba(9, 9, 121, 1) 35%, rgba(45, 85, 170, 1) 100%);
      height: 1000vh;
  }
 
-
-
- .ocean-bottom img{
-    width:100%;
-    height:auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+ #schooling-fish img {
+     width: 30%;
+     height: auto;
  }
 
- 
- body {
-    background: #FED550;
-  }
-  
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .ice-cream {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height:200px;
-    width:350px;
-    background: #fac3bf;
-    border-top: 8px solid #e6aecb;
-    border-radius: 50% 50% 50% 50% / 83% 83% 17% 17%;
-  }
-  
-  
-  
-  .face {
-    display: flex;
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 200px;
-  }
-  
-  .nose{
-       position: absolute;
-       width: 40%;
-       height: 45%;
+ .schooling-fish {
+     overflow: hidden;
+     top: 5em;
+ }
+
+ .schooling-fish img {
+     width: 100px;
+     height: auto;
+ }
+
+ @-webkit-keyframes swim-left {
+     0% {
+         margin-right: 0px
+     }
+     90% {
+         margin-right: 100%;
+     }
+     100% {
+         margin-right: 150%;
+     }
+ }
+
+ @keyframes swim-left {
+     0% {
+         margin-right: -250px
+     }
+     70% {
+         margin-right: 100%;
+     }
+     100% {
+         margin-right: 150%;
+     }
+ }
+
+ @-webkit-keyframes swim-right {
+     0% {
+         margin-left: -250px
+     }
+     90% {
+         margin-left: 100%;
+     }
+     100% {
+         margin-left: 150%;
+     }
+ }
+
+ @keyframes swim-right {
+     0% {
+         margin-left: -250px
+     }
+     70% {
+         margin-left: 100%;
+     }
+     100% {
+         margin-left: 150%;
+     }
+ }
+
+ @-moz-keyframes bounce {
+     0%, 50%, 100% {
+         -moz-transform: translateY(0);
+         transform: translateY(0);
+     }
+     25% {
+         -moz-transform: translateY(-5px);
+         transform: translateY(-5px);
+     }
+     75% {
+         -moz-transform: translateY(-3px);
+         transform: translateY(-3px);
+     }
+ }
+
+ @-webkit-keyframes bounce {
+     0%, 50%, 100% {
+         -webkit-transform: translateY(0);
+         transform: translateY(0);
+     }
+     25% {
+         -webkit-transform: translateY(-5px);
+         transform: translateY(-5px);
+     }
+     75% {
+         -webkit-transform: translateY(-3px);
+         transform: translateY(-3px);
+     }
+ }
+
+ @keyframes bounce {
+     0%, 50%, 100% {
+         -moz-transform: translateY(0);
+         -ms-transform: translateY(0);
+         -webkit-transform: translateY(0);
+         transform: translateY(0);
+     }
+     25% {
+         -moz-transform: translateY(-5px);
+         -ms-transform: translateY(-5px);
+         -webkit-transform: translateY(-5px);
+         transform: translateY(-5px);
+     }
+     75% {
+         -moz-transform: translateY(-3px);
+         -ms-transform: translateY(-3px);
+         -webkit-transform: translateY(-3px);
+         transform: translateY(-3px);
+     }
+ }
+
+ .swim-right {
+     width: 235px;
+     height: 104px;
+     margin-left: -235px;
+     position: absolute;
+     animation: swim-right 50s;
+     -webkit-animation: swim-right 5s;
+     animation-iteration-count: infinite;
+     -webkit-animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     -webkit-animation-timing-function: linear;
+ }
+
+ .swim-left {
+     width: 250px;
+     height: 104px;
+     margin-left: 1000px;
+     position: absolute;
+     animation: swim-left 5s;
+     -webkit-animation: swim-left 5s;
+     animation-iteration-count: infinite;
+     -webkit-animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     -webkit-animation-timing-function: linear;
+ }
+
+ .fish1, .fish2, .fish3, .fish4, .fish5 {
+     -moz-animation: bounce 2s infinite;
+     -webkit-animation: bounce 2s infinite;
+     animation: bounce 2s infinite;
+ }
+
+ .fish2 {
+     position: relative;
+     top: 70px;
+     animation-delay: 0.5s;
+     -webkit-animation-delay: 0.5s;
+ }
+
+ .fish3 {
+     position: relative;
+     top: -10px;
+     left: -90px;
+     animation-delay: 0.2s;
+     -webkit-animation-delay: 0.2s;
+ }
+
+ #fishgroup1 {
+     position: absolute;
+     top: 100vh;
+ }
+
+ #fishgroup2 {
+     position: absolute;
+     top: 200vh;
+ }
+
+ .ocean-bottom>* {
+     bottom: 0;
+ }
+
+ .ocean-bottom img {
+     width: 100%;
+     height: auto;
+     position: absolute;
+     left: 0;
+ }
+
+ .blobfish {
+     position: absolute;
+     bottom: 1%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     animation: MoveUpDown 3s linear infinite;
+ }
+
+ @keyframes MoveUpDown {
+     0%, 100% {
+         bottom: 1%;
+     }
+     50% {
+         bottom: 1.25%;
+     }
+ }
+
+ .body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     height: 200px;
+     width: 350px;
+     background: #fac3bf;
+     border-top: 8px solid #e6aecb;
+     border-radius: 50% 50% 50% 50% / 83% 83% 17% 17%;
+ }
+
+ .face {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     height: 200px;
+ }
+
+ .nose {
+     position: absolute;
+     width: 25%;
+     height: 45%;
      bottom: 60px;
-     z-index:2;
-       background: linear-gradient(to bottom, #fac3bf 65%, #f2a699);
-       border-radius: 20px 20px 100px 100px;
-       box-shadow: 0 5px 0 #e88d7d
-          }
-  
-  .eyes {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-  }
-  
-  .eye {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    bottom:-60px;
-    background: black;
-    border-bottom: 2px solid #FF98CC;
-    border-radius: 100%;
-  }
-  
-  .eye::before {
-    display: block;
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 5px;
-    background: #fff;
-    border-radius: 100%;
-  }
-  
-  .mouth {
-   position: absolute;
-       width: 150px;
-       height: 20px;
-       bottom: 40px ;
-       border-radius: 1000px 1000px 0 0 / 400px 400px 0 0;
-       border: 5px solid #f18470;
-       border-bottom: 0px;
-       box-shadow: inset 0 10px 0 #f7b6aa;
-  }
-  
-  .finleft {
-       position: absolute;
-       bottom: 10px;
-       width: 75px;
-       height: 50px;
-       left: -55px;
-       border-radius: 30% 70% 70% 30% / 39% 6% 94% 61%;
-       background: #f5ac9f;
-       animation: flap 1s ease-in-out infinite alternate;
-       transform-origin: top right;
-       box-shadow: inset 0 0 30px 0 #f39887;
-  }
-   @keyframes flap {
-       to {
-           transform: rotate(45deg);
-      }
-  }
-  
-  
-  .finright {
-       position: absolute;
-       bottom: 10px;
-       width: 75px;
-       height: 50px;
-       left: 55px;
-       border-radius: 30% 70% 70% 30% / 39% 6% 94% 61%;
-       background: #f5ac9f;
-       animation: flap 1s ease-in-out infinite alternate;
-       transform-origin: top right;
-       box-shadow: inset 0 0 30px 0 #f39887;
-  }
-   @keyframes flap2 {
-       to {
-           transform: rotate(-45deg);
-      }
-  }
+     z-index: 2;
+     background: linear-gradient(to bottom, #fac3bf 65%, #f2a699);
+     border-radius: 20px 20px 100px 100px;
+     box-shadow: 0px 5px 1px 1px #e88d7d
+ }
+
+ .eyes {
+     display: flex;
+     justify-content: space-between;
+     width: 200px;
+ }
+
+ .eye {
+     position: relative;
+     width: 20px;
+     height: 20px;
+     bottom: -60px;
+     background: black;
+     border-bottom: 2px solid #FF98CC;
+     border-radius: 100%;
+ }
+
+ .eye::before {
+     display: block;
+     content: '';
+     position: absolute;
+     top: 20%;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 5px;
+     height: 5px;
+     background: #fff;
+     border-radius: 100%;
+ }
+
+ .mouth {
+     position: absolute;
+     width: 150px;
+     height: 25px;
+     bottom: 40px;
+     border-radius: 1000px 1000px 0 0 / 400px 400px 0 0;
+     border: 8px solid #f18470;
+     border-bottom: 0px;
+ }
+
+ .finleft {
+     position: absolute;
+     bottom: 10px;
+     width: 75px;
+     height: 50px;
+     left: -55px;
+     border-radius: 30% 70% 70% 30% / 39% 6% 94% 61%;
+     background: #f5ac9f;
+     animation: flapleft 0.2s ease-in-out infinite alternate;
+     transform-origin: top right;
+     box-shadow: inset 0 0 25px 0 #f39887;
+ }
+
+ @keyframes flapleft {
+     to {
+         transform: rotate(40deg);
+     }
+ }
+
+ .finright {
+     position: absolute;
+     bottom: 10px;
+     width: 75px;
+     height: 50px;
+     left: 330px;
+     border-radius: 70% 30% 30% 70% / 6% 39% 61% 94%;
+     background: #f5ac9f;
+     animation: flapright 0.2s ease-in-out infinite alternate;
+     transform-origin: top left;
+     box-shadow: inset 0 0 25px 0 #f39887;
+ }
+
+ @keyframes flapright {
+     to {
+         transform: rotate(-40deg);
+     }
+ }
 
  /*prevent many large-by-comparison ripples by shrinking the height*/
 
